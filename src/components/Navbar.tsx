@@ -1,3 +1,4 @@
+
 "use client";
 
 import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
@@ -13,8 +14,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
-
+import { SidebarTrigger, useSidebar } from "./ui/sidebar";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -54,7 +54,7 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
-              <AvatarImage src="https://image.cdn2.seaart.me/2025-04-05/cvoa4qle878c73cu8gt0/c5005f7f07c90ed9fb57f3dbccae899a_high.webp" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>

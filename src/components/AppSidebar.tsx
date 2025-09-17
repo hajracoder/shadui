@@ -1,3 +1,4 @@
+
 import {
   Home,
   Inbox,
@@ -27,7 +28,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarSeparator,
-} from "@/components/ui/sidebar";
+} from "./ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -73,32 +74,18 @@ const items = [
 const AppSidebar = () => {
   return (
     <Sidebar collapsible="icon">
-     <SidebarHeader className="py-4">
-  <SidebarMenu>
-    <SidebarMenuItem>
-      <SidebarMenuButton asChild>
-        <Link href="/" className="flex items-center gap-2">
-          {/* ✅ Logo always visible */}
-          <div className="relative w-10 h-10">
-            <Image
-              src="https://image.cdn2.seaart.me/2025-04-05/cvoa4qle878c73cu8gt0/c5005f7f07c90ed9fb57f3dbccae899a_high.webp"
-              alt="Logo"
-              fill
-              className="object-contain rounded-full"
-              sizes="40px"
-            />
-          </div>
-
-          {/* ✅ Text will auto-hide on collapse */}
-          <span className="font-medium group-data-[collapsible=icon]:hidden">
-            Lama Dev
-          </span>
-        </Link>
-      </SidebarMenuButton>
-    </SidebarMenuItem>
-  </SidebarMenu>
-</SidebarHeader>
-
+      <SidebarHeader className="py-4">
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/">
+                <Image src="/logo.svg" alt="logo" width={20} height={20} />
+                <span>Lama Dev</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarHeader>
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
@@ -238,10 +225,3 @@ const AppSidebar = () => {
 };
 
 export default AppSidebar;
-
-
-
-
-
-
-
